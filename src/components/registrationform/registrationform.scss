@@ -11,6 +11,16 @@
     color: #000000de;
   }
 
+  .submission-placeholder {
+    max-width: 328px;
+    margin: 0 auto;
+
+    .success-icon {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   form {
     max-width: 380px;
     width: 100%;

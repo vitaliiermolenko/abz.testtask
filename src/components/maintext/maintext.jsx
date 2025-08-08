@@ -3,10 +3,8 @@ import "./maintext.scss";
 
 const MainText = React.memo(() => {
   const scrollToSection = useCallback((id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    const target = document.getElementById(id);
+    target?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   return (
@@ -23,7 +21,10 @@ const MainText = React.memo(() => {
               the world of Front-End Development keeps evolving.
             </p>
           </div>
-          <button onClick={() => scrollToSection("registration-form")}>
+          <button
+            type="button"
+            onClick={() => scrollToSection("registration-form")}
+          >
             Sign up
           </button>
         </div>
