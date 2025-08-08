@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 13px 16px;
+
+  @media (min-width: 768px) {
+    padding: 13px 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 13px 60px;
+  }
+
+  @media (min-width: 1290px) {
+    padding: 13px 0px;
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    display: flex;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,174 @@
+.registration-form {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+
+  .headtitle {
+    margin-bottom: 50px;
+    color: #000000de;
+  }
+
+  form {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .textform,
+    .phone-group,
+    .radiogroup,
+    .radiobuttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .textform {
+      gap: 50px;
+      margin-bottom: 25px;
+    }
+
+    .phone-group {
+      max-width: 380px;
+      width: 100%;
+      gap: 4px;
+    }
+
+    .radiogroup {
+      color: #000000de;
+      gap: 11px;
+      margin-bottom: 47px;
+    }
+
+    .radiobuttons {
+      gap: 7px;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        input[type="radio"] {
+          appearance: none;
+          -webkit-appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #d0cfcf;
+          border-radius: 50%;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:checked {
+            border-color: #00bdd3;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 10px;
+              height: 10px;
+              background-color: #00bdd3;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+
+    small {
+      padding-left: 16px;
+      color: #7e7e7e;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .textform input,
+    .fileform input {
+      padding: 14px 16px;
+      border-radius: 4px;
+      height: 54px;
+      width: 100%;
+      background-color: #f8f8f8;
+      border: 1px solid #d0cfcf;
+    }
+
+    .fileform {
+      position: relative;
+      margin-bottom: 50px;
+
+      input[type="file"] {
+        opacity: 0;
+        width: 100%;
+        height: 54px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+      }
+
+      &::before {
+        content: "Upload";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 83px;
+        height: 54px;
+        background-color: #f8f8f8;
+        border: 1px solid #000000de;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px 0 0 4px;
+        color: #000000de;
+        font-weight: 500;
+        pointer-events: none;
+      }
+
+      &::after {
+        content: "Upload your photo";
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 54px;
+        padding-left: 100px;
+        background-color: #f8f8f8;
+        border: 1px solid #d0cfcf;
+        border-radius: 4px;
+        color: #7e7e7e;
+        font-size: 16px;
+      }
+    }
+
+    .formbutton {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      margin-bottom: 100px;
+    }
+
+    button:disabled {
+      background-color: #b4b4b4;
+      color: #ffffffde;
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.7;
+    }
+
+    input.invalid,
+    .radiobuttons.invalid,
+    .fileform input.invalid {
+      border: 2px solid #cb3d40;
+    }
+  }
+}

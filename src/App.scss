@@ -1,0 +1,44 @@
+// App.scss
+.app {
+  background-color: #F8F8F8;  
+}
+
+button {
+  width: 100px;
+  height: 34px;
+  background-color: #F4E041;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover {
+    background-color: #FFE302;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  
+  text-align: center;
+}
